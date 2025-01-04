@@ -19,7 +19,7 @@ def line_chart():
     # Gerar dados
     timestamps, valuesCPU,valuesMemoria,valuesDisco = generate_data()
 
-    # Criar gráfico com Plotly
+    # Criar gráfico 1 com Plotly
     figCpu = go.Figure()
     figCpu.add_trace(go.Scatter(x=timestamps, y=valuesCPU, mode='lines+markers', name='Valores'))
 
@@ -34,7 +34,7 @@ def line_chart():
     # Retornar o HTML do gráfico
     chart_html_cpu = figCpu.to_html(full_html=False)
 
-    # Criar gráfico com Plotly
+    # Criar gráfico 2 com Plotly
     figMemoria = go.Figure()
     figMemoria.add_trace(go.Scatter(x=timestamps, y=valuesMemoria, mode='lines+markers', name='Valores'))
 
